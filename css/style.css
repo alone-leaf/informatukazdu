@@ -121,7 +121,7 @@ html, body{
   font-family: Raleway;
   font-size: 21px;
   font-weight: 300;
-  color: #023059;
+  color:  #035AA6;
 }
 .text-foto p{
   font-size: 55px;
@@ -178,7 +178,7 @@ html, body{
 #content .slide {
    width: 25%;
    height: 100%;
-   color: #000;
+   color:  #035AA6;
    float:left;
    display: flex;
    justify-content: center;
