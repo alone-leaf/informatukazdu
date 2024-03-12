@@ -340,7 +340,7 @@ li{
 .name_text p{
   font-size: 17px;
 }
-@media (max-width:980px) {
+@media (max-width:768px) {
   .teacher{
     flex-direction: column;
   }
