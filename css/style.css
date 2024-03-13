@@ -232,11 +232,14 @@ li{
   width: 90%;
 }
 @media (max-width: 1220px) {
+  .Text_foto{
+    margin-top: 4%;
+  }
   .Text h1{
     font-size: 48px;
   }
   .Foto img{
-    width: 100%;
+    width: 90%;
   }
 }
 .Slide{
