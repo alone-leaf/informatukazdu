@@ -70,7 +70,7 @@ li{
   background-color: var(--white);
   /*color: var(--one);*/
   position: fixed;
-  z-index: 0;
+  z-index: 5;
   box-shadow: 0 8px 7px -11px;
 }
 .Logo{
@@ -244,46 +244,70 @@ li{
 .Foto img{
   max-height: 100%;
 }
-@media (max-width: 1220px) {
-  .Text h1{
-    font-size: 48px;
-  }
-}
 .Slide{
-  width: 80%;
+  width: 85%;
   height: 50%;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  position: relative;
   /*margin-top: 4.5%;*/
 }
+
 .Slide .slide{
-  scroll-snap-align: center;
+  position: absolute;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3%;
+  padding: 0 7%;
+}
+.Slide input{
+  display: none;
+}
+.light, .right{
+  width: 7%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 30%;
+}
+.slide label img{
+  width: 100%;
+}
+.light:hover, .right:hover{
+  transition: all .45s ease-in-out;
+  width: 7.3%;
+  opacity: 50%;
+}
+.light{
+  left: 0;
+}
+.right{
+  right: 0;
+}
+#slide1:checked ~ #one,
+#slide2:checked ~ #two,
+#slide3:checked ~ #three{
+  display: flex;
 }
 .slide_foto{
-  height: 100%;
+  width: 49%;
 }
 .slide_foto img{
-  max-height: 100%;
+  width: 80%;
 }
 .slide_text{
   width: 57%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   font-weight: 300;
   color: var(--one);
-  font-size: 13px;
+  font-size: 18px;
 }
 .slide_text h1{
-  font-size: 25px;
-  padding-bottom: 3%;
+  font-size: 30px;
+  padding-bottom: 5%;
 }
 .condition{
   display: flex;
@@ -291,33 +315,6 @@ li{
 }
 .exams, .job{
   width: 49%;
-}
-@media (max-width:768px){
-  .Slide{
-    height: 80%;
-  }
-  .Slide .slide{
-    height: auto;
-    flex-direction: column-reverse;
-  }
-  .slide_foto{
-    width: 90%;
-  }
-  .slide_text{
-    width: 90%;
-    height: 70%;
-    font-size: 25px;
-  }
-  .slide_text h1{
-    padding-top: 2.5%;
-    font-size: 37px;
-  }
-  .condition{
-    flex-direction: column;
-  }
-  .exams, .job{
-    width: auto;
-  }
 }
 .Teacher{
   width: 80%;
@@ -350,14 +347,6 @@ li{
 }
 .name_text p{
   font-size: 17px;
-}
-@media (max-width:768px) {
-  .teacher{
-    flex-direction: column;
-  }
-  .name_text{
-    margin-bottom: 3%;
-  }
 }
 .kontakt {
   display: flex;
